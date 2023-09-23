@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Task4</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 35px;
+            transition: width 0.3s;
+            z-index: 1;
+        }
+
+        .navbar:hover {
+            width: 200px;
+        }
+
+        .nav-item {
+            padding: 10px;
+            text-align: center;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+        .nav-item:hover {
+            background-color: #555;
+        }
+
+        .nav-text {
+            display: none;
+            padding-left: 10px;
+            color: white;
+        }
+
+        .navbar:hover .nav-text {
+            display: block;
+        }
+
+        .content {
+            transition: margin-left 0.3s; 
+            margin-left: 100px;
+            padding: 10px;
+        }
+
+        .navbar:hover + .content {
+            margin-left: 200px; 
+        }
+        .red { 
+            background-color: #FF5733; 
+            border-radius: 0px 5px 5px 0px;
+            height: 30px;
+        }
+        .green { background-color: #33FF57; border-radius: 0px 5px 5px 0px;
+            height: 30px;}
+        .blue { background-color: #337DFF; border-radius: 0px 5px 5px 0px;
+            height: 30px;}
+        .gray { background-color: #494949; border-radius: 0px 5px 5px 0px;
+            height: 30px;}
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <br>
+        <div class="nav-item green">
+            <div class="nav-text">Home</div>
+        </div>
+        <br>
+        <div class="nav-item red">
+            <div class="nav-text">About</div>
+        </div>
+        <br>
+        <div class="nav-item blue">
+            <div class="nav-text">Contact</div>
+        </div>
+        <br>
+        <div class="nav-item gray">
+            <div class="nav-text">Facilities</div>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Hoverable Sidenav Buttons</h1>
+        <p>Hover over the buttons on the left side navigation to open them</p>
+    </div>
+</body>
+</html>
